@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "esspoket", "esspoket\esspoket.csproj", "{D6A059E9-3814-4B4F-BB29-6187C3749D71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6A059E9-3814-4B4F-BB29-6187C3749D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6A059E9-3814-4B4F-BB29-6187C3749D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6A059E9-3814-4B4F-BB29-6187C3749D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6A059E9-3814-4B4F-BB29-6187C3749D71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
