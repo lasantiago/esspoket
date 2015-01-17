@@ -17,8 +17,6 @@ namespace esspoket
 
         public Account DestinationAccount { get; set; }
 
-
-
         public string Details { get; set; }
 
         public double OriginalAmount { get; set; }
