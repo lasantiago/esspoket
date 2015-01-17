@@ -13,7 +13,7 @@ namespace esspoket
 
         }
 
-        public int FinantialInstrumentType { get; set; }
+        public int FinantialInstrumentTypeID { get; set; }
         public string FinantialInstrumentName { get; set; }
 
     }

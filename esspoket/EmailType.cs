@@ -13,6 +13,6 @@ namespace esspoket
 
         }
         public int EmailTypeID { get; set; }
-        public string EmailType { get; set; }
+        public string EmailTypeName { get; set; }
     }
 }

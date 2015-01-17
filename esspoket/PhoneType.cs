@@ -14,6 +14,6 @@ namespace esspoket
         }
 
         public int PhoneTypeID { get; set; }
-        public string PhoneType { get; set; }
+        public string PhoneTypeName { get; set; }
     }
 }
