@@ -7,7 +7,7 @@
     <ProjectGuid>{D6A059E9-3814-4B4F-BB29-6187C3749D71}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>esspoket</RootNamespace>
+    <RootNamespace>esspocketORM</RootNamespace>
     <AssemblyName>esspoket</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

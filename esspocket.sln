@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "esspoket", "esspoket\esspoket.csproj", "{D6A059E9-3814-4B4F-BB29-6187C3749D71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "esspocketORM", "esspoket\esspocketORM.csproj", "{D6A059E9-3814-4B4F-BB29-6187C3749D71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
