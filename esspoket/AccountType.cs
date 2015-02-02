@@ -17,14 +17,4 @@ namespace esspocketORM
         public string AccountName { get; set; }
 
     }
-
-    public class AccountTypeContext : DbContext
-    {
-        public AccountTypeContext() : base()
-        {
-        }
-
-        public DbSet<AccountType> AccountTypes { get; set; }
-    }
-     
 }

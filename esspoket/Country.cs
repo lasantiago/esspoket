@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +12,25 @@ namespace esspocketORM
     {
         public Country()
         {
-
+        }
+        
+        /// <summary>
+        /// TODO: CREATE a way to insert a country with a corresponding db language for localization
+        /// </summary>
+        /// <param name="c"></param>
+        public Country(string c)
+        {
+            this.CountryName = c;
+            //this.Language = l;
         }
 
-        public int CountryID { get; set; }
+        [Key]
+        public int CountryId { get; set; }
 
+        [Required]
         public string CountryName { get; set; }
+
+       // [ForeignKey("LanguageId")]
+        public Language Language { get; set; }
     }
 }

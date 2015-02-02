@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,10 +15,14 @@ namespace esspocketORM
 
         }
 
+        [Key]
         public Guid AccountFinantialInstrumentID { get; set; }
 
+        [Required]
         public FinantialInstrumentType FinantialInstrumentType { get; set; }
 
+        [Required]
+        [ForeignKey("AccountId")]
         public Account Account { get; set; }        
     }
 }
