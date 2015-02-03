@@ -16,7 +16,7 @@ namespace esspocketORM
         }
 
         [Key]
-        public Guid AccountFinantialInstrumentID { get; set; }
+        public Guid AccountFinantialInstrumentId { get; set; }
 
         [Required]
         public FinantialInstrumentType FinantialInstrumentType { get; set; }

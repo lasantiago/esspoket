@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +14,12 @@ namespace esspocketORM
         public AccountType()
         {
         }
-    
-        public int AccountTypeID { get; set; }
+
+        [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
+        public int AccountTypeId { get; set; }
+
+        [Required]
         public string AccountName { get; set; }
 
     }

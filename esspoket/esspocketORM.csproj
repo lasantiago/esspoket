@@ -62,6 +62,7 @@
     <Compile Include="EsspocketDBContextSeeder.cs" />
     <Compile Include="FinantialInstrumentType.cs" />
     <Compile Include="Gender.cs" />
+    <Compile Include="iesspocketORM.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="Locality.cs" />
     <Compile Include="Migrations\201502021924223_Initial.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Region.cs" />
     <Compile Include="Transaction.cs" />
     <Compile Include="TransactionStatus.cs" />
+    <Compile Include="TransactionType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

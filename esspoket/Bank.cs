@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,10 +15,13 @@ namespace esspocketORM
 
         }
 
-        public int BankID { get; set; }
+        [Key]
+        public int BankId { get; set; }
 
+        [Required]
         public string BankName { get; set; }
 
+        [Required]
         public Locality Locality { get; set; }
     }
 }

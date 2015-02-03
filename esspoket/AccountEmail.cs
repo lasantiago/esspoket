@@ -14,7 +14,7 @@ namespace esspocketORM
 
         }
         [Key]
-        public Guid AccountEmailID { get; set; }
+        public Guid AccountEmailId { get; set; }
         public Account Account { get; set; }
         public EmailType EmailType { get; set; }
 
@@ -27,5 +27,29 @@ namespace esspocketORM
         [Required]
         public bool IsPrimaryAccountEmail { get; set; }
 
+        public IEnumerable<AccountEmail> GetAll(EsspocketDBContext e)
+        {
+            return (from c in e.AccountEmails
+                    select c);
+        }
+
+        public AccountEmail GetAccountPrimaryEmailAddressByAccountId(EsspocketDBContext e, string id)
+        {
+            var query = (from c in e.AccountEmails
+                         where c.Account.AccountId == new Guid(id)
+                             & c.IsPrimaryAccountEmail == true
+                         select c).FirstOrDefault();
+
+            return query;
+        }
+
+        public IEnumerable<AccountEmail> GetAccountEmailAddressesByAccountId(EsspocketDBContext e, string id)
+        {
+            var query = (from c in e.AccountEmails
+                         where c.Account.AccountId == new Guid(id)
+                         select c);
+
+            return query;
+        }
     }
 }

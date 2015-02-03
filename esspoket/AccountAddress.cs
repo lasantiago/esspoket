@@ -15,7 +15,7 @@ namespace esspocketORM
         }
 
         [Key]
-        public Guid AccountAddressID { get; set; }
+        public Guid AccountAddressId { get; set; }
         public Account Account { get; set; }
 
         [Required]
@@ -29,5 +29,33 @@ namespace esspocketORM
         public bool IsAddressActive { get; set; }
         [Required]
         public bool IsAddressAproved { get; set; }
+
+        [Required]
+        public bool IsPrimaryAccountAddress { get; set; }
+
+        public IEnumerable<AccountAddress> GetAll(EsspocketDBContext e)
+        {
+            return (from c in e.AccountAddresses
+                    select c);
+        }
+
+        public AccountAddress GetAccountPrimaryAddressByAccountId(EsspocketDBContext e, string id)
+        {
+            var query = (from c in e.AccountAddresses
+                         where c.Account.AccountId == new Guid(id)
+                             & c.IsPrimaryAccountAddress == true
+                         select c).FirstOrDefault();
+
+            return query;
+        }
+
+        public IEnumerable<AccountAddress> GetAccountAddressesByAccountId(EsspocketDBContext e, string id)
+        {
+            var query = (from c in e.AccountAddresses
+                         where c.Account.AccountId == new Guid(id)
+                             select c);
+
+            return query;
+        }
     }
 }

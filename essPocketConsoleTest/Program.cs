@@ -13,7 +13,8 @@ namespace essPocketConsoleTest
         static void Main(string[] args)
         {
             AccountRepository ac = new AccountRepository();
-            Console.Write(ac.GetAccounts());
+            Console.Write(ac.GetAll(new EsspocketDBContext()).ToList());
+            Console.Read();
         }
     }
 }

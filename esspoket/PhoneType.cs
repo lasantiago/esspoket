@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +15,9 @@ namespace esspocketORM
 
         }
 
-        public int PhoneTypeID { get; set; }
+        [Key]
+        public int PhoneTypeId { get; set; }
+        [Required]
         public string PhoneTypeName { get; set; }
     }
 }
