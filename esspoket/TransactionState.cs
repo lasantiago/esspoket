@@ -8,28 +8,18 @@ using System.Threading.Tasks;
 
 namespace esspocketORM
 {
-    public class Language
+    public class TransactionState
     {
-        public Language()
-        {
-
-        }
-
-        public Language(string ISO6391, string languagename)
-        {
-            this.ISO6391 = ISO6391;
-            this.LanguageName = LanguageName;
-        }
+        /// <summary>
+        /// Describes transaction states (1- Unsigned, 2- Signed, 3- Submitted, 4- Confirmed, 5- Errored, 6- Aborted
+        /// </summary>
         [Key]
-        public Guid LanguageId { get; set; }
-
-        [Required]
-        public string ISO6391 { get; set; }
-
+        public int TransactionStateId { get; set; }
+        
         [Required]
         [DataType(DataType.Text)]
         [MaxLength(15)]
-        public string LanguageName { get; set; }
+        public string TransactionStateName { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Localization.es_DO), ErrorMessageResourceName = "DateEnteredRequiredError")]
         [DataType(DataType.DateTime)]
@@ -56,33 +46,17 @@ namespace esspocketORM
         [Display(Name = "AssignedToUserId", ResourceType = typeof(Localization.es_DO), Description = "AssignedToUserIdDescription")]
         public Guid AssignedToUserId { get; set; }
 
-        public IEnumerable<Language> GetAll(EsspocketDBContext e)
+        public IEnumerable<TransactionState> GetAll(EsspocketDBContext e)
         {
-            return (from c in e.Languages
+            return (from c in e.TransactionStates
+                    orderby c.TransactionStateId ascending
                     select c);
         }
 
-        public Language GetLanguageByLanguageId(EsspocketDBContext e, string id)
+        public TransactionState GetTransactionStateById(EsspocketDBContext e, int id)
         {
-            var query = (from c in e.Languages
-                         where c.LanguageId == new Guid(id)
-                         select c).FirstOrDefault();
-
-            return query;
-        }
-        public Language GetLanguageByISO(EsspocketDBContext e, string iso)
-        {
-            var query = (from c in e.Languages
-                         where c.ISO6391 == iso
-                         select c).FirstOrDefault();
-
-            return query;
-        }
-
-        public Language GetLanguageByName(EsspocketDBContext e, string name)
-        {
-            var query = (from c in e.Languages
-                         where c.LanguageName == name
+            var query = (from c in e.TransactionStates
+                         where c.TransactionStateId == id
                          select c).FirstOrDefault();
 
             return query;

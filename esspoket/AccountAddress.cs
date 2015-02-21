@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace esspocketORM
 {
@@ -16,14 +17,24 @@ namespace esspocketORM
 
         [Key]
         public Guid AccountAddressId { get; set; }
+        [Required]
+        [ForeignKey("AccountId")]
         public Account Account { get; set; }
+        public Guid AccountId { get; set; }
+
 
         [Required]
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }
         public string Building { get; set; }
         public string PremiseNumber { get; set; }
+
+        [Required]
+        [ForeignKey("LocalityId")]
         public Locality Locality { get; set; }
+
+        public Guid LocalityId { get; set; }
+
         public string Postcode { get; set; }
         [Required]
         public bool IsAddressActive { get; set; }

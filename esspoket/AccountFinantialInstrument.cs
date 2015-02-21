@@ -23,6 +23,7 @@ namespace esspocketORM
 
         [Required]
         [ForeignKey("AccountId")]
-        public Account Account { get; set; }        
+        public Account Account { get; set; }
+        public Guid AccountId { get; set; }      
     }
 }

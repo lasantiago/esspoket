@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace esspocketORM
 {
@@ -15,7 +16,11 @@ namespace esspocketORM
         }
         [Key]
         public Guid AccountEmailId { get; set; }
+        
+        [Required]
+        [ForeignKey("AccountId")]
         public Account Account { get; set; }
+        public Guid AccountId { get; set; }
         public EmailType EmailType { get; set; }
 
         [Required]

@@ -65,25 +65,32 @@
     <Compile Include="iesspocketORM.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="Locality.cs" />
-    <Compile Include="Migrations\201502021924223_Initial.cs" />
-    <Compile Include="Migrations\201502021924223_Initial.Designer.cs">
-      <DependentUpon>201502021924223_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201502211759499_Initial.cs" />
+    <Compile Include="Migrations\201502211759499_Initial.Designer.cs">
+      <DependentUpon>201502211759499_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PhoneType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Region.cs" />
     <Compile Include="Transaction.cs" />
-    <Compile Include="TransactionStatus.cs" />
+    <Compile Include="TransactionState.cs" />
     <Compile Include="TransactionType.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201502021924223_Initial.resx">
-      <DependentUpon>201502021924223_Initial.cs</DependentUpon>
+    <ProjectReference Include="..\Localization\Localization.csproj">
+      <Project>{c17ea2e0-5105-418a-a79e-7d23d1cebf8d}</Project>
+      <Name>Localization</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201502211759499_Initial.resx">
+      <DependentUpon>201502211759499_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

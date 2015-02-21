@@ -9,6 +9,7 @@ namespace esspocketORM
 {
     public class EsspocketDBContext : DbContext
     {
+        public DbSet<AccountType> AccountTypes { get; set; }
         public DbSet<Account> Accounts { get; set; }
 
         public DbSet<AccountAddress> AccountAddresses { get; set; }
@@ -25,11 +26,13 @@ namespace esspocketORM
         public DbSet<Region> Regions { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
 
-        public DbSet<TransactionStatus> TransactionStatuses { get; set; }
+        public DbSet<TransactionState> TransactionStates { get; set; }
 
         public DbSet<TransactionType> TransactionTypes { get; set; }
 
         public DbSet<Language> Languages { get; set; }
+        public DbSet<User> Users { get; set; }
+
 
     }
 }

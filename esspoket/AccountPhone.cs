@@ -17,8 +17,12 @@ namespace esspocketORM
 
         [Key]
         public Guid AccountPhoneId { get; set; }
+        
         [Required]
+        [ForeignKey("AccountId")]
         public Account Account { get; set; }
+        public Guid AccountId { get; set; }
+        
         [Required]
         public PhoneType PhoneType { get; set; }
         [Required]

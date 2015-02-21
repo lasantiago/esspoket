@@ -13,12 +13,12 @@ namespace esspocketORM.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201502021924223_Initial"; }
+            get { return "201502211759499_Initial"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target
