@@ -65,9 +65,9 @@
     <Compile Include="iesspocketORM.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="Locality.cs" />
-    <Compile Include="Migrations\201502211759499_Initial.cs" />
-    <Compile Include="Migrations\201502211759499_Initial.Designer.cs">
-      <DependentUpon>201502211759499_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201502212005135_Initial.cs" />
+    <Compile Include="Migrations\201502212005135_Initial.Designer.cs">
+      <DependentUpon>201502212005135_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PhoneType.cs" />
@@ -89,8 +89,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201502211759499_Initial.resx">
-      <DependentUpon>201502211759499_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201502212005135_Initial.resx">
+      <DependentUpon>201502212005135_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
