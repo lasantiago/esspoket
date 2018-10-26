@@ -14,6 +14,8 @@ namespace esspocketAPI.Controllers
         public IEnumerable<Account> GetAll()
         {
             return c.GetAll(new EsspocketDBContext());
+
+            //Comentar algo
         }
 
         public Account GetAccountById(string id)
